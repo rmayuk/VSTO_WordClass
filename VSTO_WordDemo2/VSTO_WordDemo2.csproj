@@ -176,6 +176,9 @@
     <EmbeddedResource Include="SimpleControl.resx">
       <DependentUpon>SimpleControl.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="TextFormattingControl.resx">
+      <DependentUpon>TextFormattingControl.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -189,6 +192,12 @@
     </Compile>
     <Compile Include="SimpleControl.Designer.cs">
       <DependentUpon>SimpleControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TextFormattingControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TextFormattingControl.Designer.cs">
+      <DependentUpon>TextFormattingControl.cs</DependentUpon>
     </Compile>
     <Compile Include="ThisAddIn.cs">
       <SubType>Code</SubType>

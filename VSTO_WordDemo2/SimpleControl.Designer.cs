@@ -28,8 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.txtNoOfRows = new System.Windows.Forms.TextBox();
             this.txtNoOfCols = new System.Windows.Forms.TextBox();
             this.btnGenTable = new System.Windows.Forms.Button();
@@ -41,26 +39,9 @@
             this.btnSelectedText = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(39, 34);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(70, 23);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Send Msg";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(8, 8);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(128, 20);
-            this.textBox1.TabIndex = 1;
-            // 
             // txtNoOfRows
             // 
-            this.txtNoOfRows.Location = new System.Drawing.Point(9, 98);
+            this.txtNoOfRows.Location = new System.Drawing.Point(77, 77);
             this.txtNoOfRows.Name = "txtNoOfRows";
             this.txtNoOfRows.Size = new System.Drawing.Size(100, 20);
             this.txtNoOfRows.TabIndex = 2;
@@ -68,7 +49,7 @@
             // 
             // txtNoOfCols
             // 
-            this.txtNoOfCols.Location = new System.Drawing.Point(9, 146);
+            this.txtNoOfCols.Location = new System.Drawing.Point(77, 125);
             this.txtNoOfCols.Name = "txtNoOfCols";
             this.txtNoOfCols.Size = new System.Drawing.Size(100, 20);
             this.txtNoOfCols.TabIndex = 3;
@@ -76,7 +57,7 @@
             // 
             // btnGenTable
             // 
-            this.btnGenTable.Location = new System.Drawing.Point(9, 184);
+            this.btnGenTable.Location = new System.Drawing.Point(77, 163);
             this.btnGenTable.Name = "btnGenTable";
             this.btnGenTable.Size = new System.Drawing.Size(75, 23);
             this.btnGenTable.TabIndex = 4;
@@ -87,7 +68,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(6, 78);
+            this.label1.Location = new System.Drawing.Point(74, 57);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(63, 13);
             this.label1.TabIndex = 5;
@@ -96,7 +77,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(6, 126);
+            this.label2.Location = new System.Drawing.Point(74, 105);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(76, 13);
             this.label2.TabIndex = 5;
@@ -104,7 +85,7 @@
             // 
             // btnStrikethrough
             // 
-            this.btnStrikethrough.Location = new System.Drawing.Point(22, 350);
+            this.btnStrikethrough.Location = new System.Drawing.Point(90, 329);
             this.btnStrikethrough.Name = "btnStrikethrough";
             this.btnStrikethrough.Size = new System.Drawing.Size(87, 23);
             this.btnStrikethrough.TabIndex = 6;
@@ -115,7 +96,7 @@
             // lblSelectedText
             // 
             this.lblSelectedText.AutoSize = true;
-            this.lblSelectedText.Location = new System.Drawing.Point(6, 251);
+            this.lblSelectedText.Location = new System.Drawing.Point(74, 230);
             this.lblSelectedText.Name = "lblSelectedText";
             this.lblSelectedText.Size = new System.Drawing.Size(91, 13);
             this.lblSelectedText.TabIndex = 5;
@@ -124,7 +105,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(20, 228);
+            this.label4.Location = new System.Drawing.Point(88, 207);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(73, 13);
             this.label4.TabIndex = 5;
@@ -132,7 +113,7 @@
             // 
             // btnSelectedText
             // 
-            this.btnSelectedText.Location = new System.Drawing.Point(10, 276);
+            this.btnSelectedText.Location = new System.Drawing.Point(78, 255);
             this.btnSelectedText.Name = "btnSelectedText";
             this.btnSelectedText.Size = new System.Drawing.Size(109, 23);
             this.btnSelectedText.TabIndex = 6;
@@ -153,19 +134,14 @@
             this.Controls.Add(this.btnGenTable);
             this.Controls.Add(this.txtNoOfCols);
             this.Controls.Add(this.txtNoOfRows);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.button1);
             this.Name = "SimpleControl";
-            this.Size = new System.Drawing.Size(150, 472);
+            this.Size = new System.Drawing.Size(300, 472);
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox txtNoOfRows;
         private System.Windows.Forms.TextBox txtNoOfCols;
         private System.Windows.Forms.Button btnGenTable;

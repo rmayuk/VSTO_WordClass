@@ -11,20 +11,36 @@ namespace VSTO_WordDemo2
 {
     public partial class ThisAddIn
     {
-        private Microsoft.Office.Tools.CustomTaskPane _taskPane; 
+        private Microsoft.Office.Tools.CustomTaskPane _taskPane;
+        private Microsoft.Office.Tools.CustomTaskPane _textPane;
 
 
         private void ThisAddIn_Startup(object sender, System.EventArgs e)
         {
-            _taskPane = this.CustomTaskPanes.Add(new SimpleControl(), "Syed's Docu.Builder");
-            _taskPane.Visible = true;
+            #region Action Pane
+            _taskPane = this.CustomTaskPanes.Add(new SimpleControl(), "AIT Action Pane");
+            _taskPane.Width = 300;
+            _taskPane.Visible = false;
             _taskPane.VisibleChanged +=new EventHandler(_taskPane_VisibleChanged);
+            #endregion
+
+            #region Text Formatting Pane
+            _textPane = this.CustomTaskPanes.Add(new TextFormattingControl(), "AIT Text Pane");
+            _textPane.Width = 300;
+            _textPane.Visible = true;
+            _textPane.VisibleChanged += new EventHandler(_textPane_VisibleChanged);
+            #endregion
         }
 
         private void _taskPane_VisibleChanged(object sender, EventArgs e)
         {
             Globals.Ribbons.ManageTaskPaneRibbon.toggleButton1.Checked = _taskPane.Visible;
-        } 
+        }
+        private void _textPane_VisibleChanged(object sender, EventArgs e)
+        {
+            Globals.Ribbons.ManageTaskPaneRibbon.tglBtnTextFormatting.Checked = _textPane.Visible;
+        }
+        
         private void ThisAddIn_Shutdown(object sender, System.EventArgs e)
         {
         }

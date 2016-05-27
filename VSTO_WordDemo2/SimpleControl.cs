@@ -19,24 +19,7 @@ namespace VSTO_WordDemo2
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                if (!String.IsNullOrEmpty(textBox1.Text))
-                {
-                    Word.Document document = Globals.ThisAddIn.Application.ActiveDocument;
-                    object start = 0;
-                    object end = 0;
-                    Word.Range range = (Word.Range)document.Range(ref start, ref end);
-                    range.InsertAfter(textBox1.Text);
-                }
-            }
-            catch (COMException ex)
-            {
-                System.Diagnostics.Debug.WriteLine(ex.ToString());
-            }
-        }
+        
 
         private void btnGenTable_Click(object sender, EventArgs e)
         {
