@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<customUI xmlns="http://schemas.microsoft.com/office/2009/07/customui" onLoad="Ribbon_Load">
+  <ribbon>
+    <tabs>
+      <tab id="ISOClass" label="Document Classification">
+        <group id="ContentGroup" label="Please classify your document">
+          <dropDown id="Classification" label="Select a classification"
+                    getSelectedItemID="ddGetSelectedItemID"
+                    onAction="ClassChange"
+                     imageMso="OutlookGlobe">
+            <item id="Private"  imageMso="Private" label ="Private" screentip="PRIVATE" supertip="Information that you'd want to carry with you when going to the toilet, rather than leaving it on the table in a coffee shop." />
+            <item id="Public" imageMso="OutlookGlobe" label ="Public" screentip="PUBLIC" supertip="Information that you'd be happy to leave on a table, unprotected, in a coffee shop."    />
+            <item id="Privileged" imageMso="AdpPrimaryKey"  label ="Privileged" screentip="PRIVILEGED" supertip ="Information that you wouldn't let anybody else see, because if you did, there would be serious legal or reputational damage. " />
+          </dropDown>
+          <separator id="Sep1" />
+          <button idMso="FileSave" imageMso="FileSave" size="large" label="Save" enabled="true"/>
+          <button idMso="FileSaveAs" imageMso="FileSaveAs" size="large" label="Save As" enabled="true"/>
+          <separator id="Sep2" />
+          <button id="AddHeader" size="large" label ="Add Classification To Header" onAction="AddHeader" imageMso="GoToHeader"/>
+        </group>
+      </tab>
+    </tabs>
+  </ribbon>
+</customUI>
+
